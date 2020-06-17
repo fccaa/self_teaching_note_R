@@ -7,9 +7,9 @@ jupyter-nbconvert "$infile" --to latex --output tmp
 sed -i 's@\maketitle@\maketitle\\\Tableofcontents@g' tmp.tex
 sed -i 's@Tableofcontents@tableofcontents@g' tmp.tex
 
-pdflatex tmp.tex
-pdflatex tmp.tex
-pdflatex tmp.tex
+xelatex tmp.tex
+xelatex tmp.tex
+xelatex tmp.tex
 
 mv tmp.pdf "$outfile"
 
